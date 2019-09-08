@@ -1,0 +1,87 @@
+body{
+	magin:0;
+	padding: 0;
+	background-image: url(/photo.jpg);
+}
+form{
+margin-left: 20%;
+left: 600px;
+top:150px;
+height: 500px;	
+width: 290px;
+background-color: #660000;
+border-radius: 20px;
+}
+input{
+	position: relative;
+	height: 80px;
+	width: 252px;
+	border-radius: 10px;
+	font-size: 50px;
+	background-color: black;
+	opacity: 0.5;
+	color: white;
+	border:none;
+	left: 20px;
+	top: 20px;
+}
+button{
+	position: relative;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border: solid;
+	border-size:5px;
+	border-color: red;
+	outline: none;
+}
+#plus,#c,#percent,#divide,#multi,#sub,#plus,#equal{
+	background-color: red;
+	border: solid;
+	border-size:5px;
+	border-color: black;
+}
+table{
+	position: relative;
+	top: 60px;
+	left: 20px;
+}
+#selectL{
+	position: relative;
+	top: 30px;
+	left: 20px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	border: none;
+	outline: none;
+	font-family: italic;
+}
+#color{
+	position: relative;
+	top: 35px;
+	right: -130px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	border: none;
+	outline: none;
+	font-family: italic;
+}
+
+@media (max-width:800px) {
+form{
+margin-left: 20%;
+left: 600px;
+top:150px;
+height: 70vh;	
+
+background-color: #660000;
+border-radius: 20px;
+}
+	
+}

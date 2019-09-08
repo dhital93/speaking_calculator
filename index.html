@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/calc.css">
+	<meta charset="UTF-8">
+	<title>calculator</title>
+</head>
+
+<body>
+	<form name="calculator" id="container">
+		<input type="text" name="textview" id="textview" disabled>
+		<select name="selectL" id="selectL">
+			<option value="portugies" id="portugies">Portugies</option>
+			<option value="english" id="english">English</option>
+			<option value="none" id="none">None</option>
+		</select>
+		<select id="color" onclick="colorchange()">
+			<option>Red</option>
+			<option>Black</option>
+			<option>White</option>
+			<option>Green</option>
+			<option>None</option>
+		</select>
+		<table>
+			<tr>
+				<td><button type="button" id="c" value="C" onclick="clearB()">C</button></td>
+				<td><button type="button" id="plus" value="+/-" onclick="backB()">⌦</button></td>
+				<td><button type="button" id="percent" value="%" onclick="">D</button></td>
+				<td><button type="button" id="divide" value="/" onclick="divideB()"> / </button> </td>
+			</tr>
+			<tr>
+				<td><button type="button" value="7" onclick="seven()">7</button></td>
+				<td><button type="button" value="8" onclick="eight()">8</button></td>
+				<td><button type="button" value="9" onclick="nine()">9</button></td>
+				<td><button type="button" value="*" id="multi" onclick="multiB()">X</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="4" onclick="four()">4</button></td>
+				<td><button type="button" value="5" onclick="five()">5</button></td>
+				<td><button type="button" value="6" onclick="six()">6</button></td>
+				<td><button type="button" value="-" id="sub" onclick="subB()">-</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="1" onclick="one()">1</button></td>
+				<td><button type="button" value="2" onclick="two()">2</button></td>
+				<td><button type="button" value="3" onclick="three()">3</button></td>
+				<td><button type="button" value="+" id="plus" onclick="plusB()">+</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="0" onclick="zero()">0</button></td>
+				<td><button type="button" value="." onclick="point()">.</button></td>
+				<td><button type="button" value="00" onclick="zeroB()">00</button></td>
+				<td><button type="button" value="=" id="equal" onclick="equalB()">=</button></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		//for number one
+		function one() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'oneE.aac';
+			var oneP = new Audio();
+			oneP.src = 'oneP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 1;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 1;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 1;
+			}
+		}
+		//for number two
+		function two() {
+			var language = document.getElementById('selectL').value;
+			var twoE = new Audio();
+			twoE.src = 'twoE.aac';
+			var twoP = new Audio();
+			twoP.src = 'twoP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 2;
+				twoP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 2;
+				twoE.play();
+			}
+			else {
+				document.getElementById('textview').value += 2;
+			}
+		}
+		//for number three
+		function three() {
+			var language = document.getElementById('selectL').value;
+			var threeE = new Audio();
+			threeE.src = 'threeE.aac';
+			var threeP = new Audio();
+			threeP.src = 'threeP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 3;
+				threeP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 3;
+				threeE.play();
+			}
+			else {
+				document.getElementById('textview').value += 3;
+			}
+		}
+		//for number four
+		function four() {
+			var language = document.getElementById('selectL').value;
+			var fourE = new Audio();
+			fourE.src = 'fourE.aac';
+			var fourP = new Audio();
+			fourP.src = 'fourP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 4;
+				fourP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 4;
+				fourE.play();
+			}
+			else {
+				document.getElementById('textview').value += 4;
+			}
+		}
+		//number five
+		function five() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'fiveE.aac';
+			var oneP = new Audio();
+			oneP.src = 'fiveP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 5;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 5;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 5;
+			}
+		}
+		//number six
+		function six() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'sixE.aac';
+			var oneP = new Audio();
+			oneP.src = 'sixP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 6;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 6;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 6;
+			}
+		}
+		//number seven
+		function seven() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'sevenE.aac';
+			var oneP = new Audio();
+			oneP.src = 'sevenP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 7;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 7;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 7;
+			}
+		}
+		//number eight
+		function eight() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'eightE.aac';
+			var oneP = new Audio();
+			oneP.src = 'eightP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 8;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 8;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 8;
+			}
+		}
+		//number nine
+		function nine() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'nineE.aac';
+			var oneP = new Audio();
+			oneP.src = 'nineP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 9;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 9;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 9;
+			}
+		}
+		//number zero
+		function zero() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'zeroE.aac';
+
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 0;
+				oneE.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 0;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 0;
+			}
+		}
+		//function for double zero
+		function zeroB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'zeroE.aac';
+
+			if (language == 'portugies') {
+				document.getElementById('textview').value += 00;
+				oneE.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += 00;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += 00;
+			}
+		}
+		//point
+		function point() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'pointE.aac';
+			var oneP = new Audio();
+			oneP.src = 'pointP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += '.';
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += '.';
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += '.';
+			}
+		}
+		//multi
+		function multiB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'multiE.aac';
+			var oneP = new Audio();
+			oneP.src = 'multiP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += "*";
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += "*";
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += "*";
+			}
+		}
+		//divide
+		function divideB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'divideE.aac';
+			var oneP = new Audio();
+			oneP.src = 'divideP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += "/";
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += "/";
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += "/";
+			}
+		}
+		//substract
+		function subB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'subE.aac';
+			var oneP = new Audio();
+			oneP.src = 'subP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += "-";
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += "-";
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += "-";
+			}
+		}
+		//additation\
+		function plusB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'plusE.aac';
+			var oneP = new Audio();
+			oneP.src = 'plusP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value += "+";
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value += "+";
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value += "+";
+			}
+		}
+		//clear
+		function clearB() {
+			var language = document.getElementById('selectL').value;
+			var oneE = new Audio();
+			oneE.src = 'clearE.aac';
+			var oneP = new Audio();
+			oneP.src = 'clearP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value = "";
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value = "";
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value = "";
+			}
+		}
+		//equal 
+		function equalB() {
+			var language = document.getElementById('selectL').value;
+			var equal = eval(document.getElementById('textview').value);
+			var oneE = new Audio();
+			oneE.src = 'equalE.aac';
+			var oneP = new Audio();
+			oneP.src = 'equalP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value = equal;
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value = equal;
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value = equal;
+			}
+		}
+		//backspace
+		function backB() {
+			var language = document.getElementById('selectL').value;
+			var num = document.getElementById('textview').value;
+			var oneE = new Audio();
+			oneE.src = 'backE.aac';
+			var oneP = new Audio();
+			oneP.src = 'backP.aac';
+			if (language == 'portugies') {
+				document.getElementById('textview').value = num.substr(0, num.length - 1);
+				oneP.play();
+			}
+			else if (language == 'english') {
+				document.getElementById('textview').value = num.substr(0, num.length - 1);
+				oneE.play();
+			}
+			else {
+				document.getElementById('textview').value = num.substr(0, num.length - 1);
+			}
+		}
+		//COLOR pdrogamming
+		function colorchange() {
+			var colors = document.getElementById('color').value;
+			if (colors == 'Red') {
+				document.getElementById('container').style.background = "red";
+			}
+			else if (colors == 'White') {
+				document.getElementById('container').style.background = "white";
+			}
+			else if (colors == 'Black') {
+				document.getElementById('container').style.background = "black";
+			}
+			else if (colors == 'Green') {
+				document.getElementById('container').style.background = "green";
+			}
+			else if (colors == 'None') {
+				document.getElementById('container').style.background = "none";
+			}
+
+		}
+
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>
